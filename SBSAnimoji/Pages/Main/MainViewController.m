@@ -68,6 +68,7 @@
         }
         NSArray *activityItems = @[ movieURL ];
         UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+        activityViewController.popoverPresentationController.sourceView = self.contentView.shareButton;
         [weakSelf presentViewController:activityViewController animated:true completion:nil];
     }];
 }
